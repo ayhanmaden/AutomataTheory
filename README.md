@@ -15,7 +15,7 @@
 [HW1](https://ayhanmaden.github.io/AutomataTheory/HW1.html) <br>
 [HW2](https://ayhanmaden.github.io/AutomataTheory/HW2/Expression.html) <br>
 [HW3](https://ayhanmaden.github.io/AutomataTheory/HW3/microJ1.html) <br>
-[HW4](https://ayhanmaden.github.io/AutomataTheory/HW4/regex2nfa.html) <br>
+[HW4](https://ayhanmaden.github.io/AutomataTheory/HW4/main.html) <br>
 
 # Term Project
 [Term Project](https://ayhanmaden.github.io/AutomataTheory/HW4/main.html) <br>
