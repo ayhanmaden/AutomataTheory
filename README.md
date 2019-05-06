@@ -18,4 +18,4 @@
 [HW4](https://ayhanmaden.github.io/AutomataTheory/HW4/regex2nfa.html) <br>
 
 # Term Project
-[Term Project](https://ayhanmaden.github.io/AutomataTheory/HW4/regex2nfa.html) <br>
+[Term Project](https://ayhanmaden.github.io/AutomataTheory/HW4/main.html) <br>
