@@ -43,8 +43,6 @@
   <div class="tab-pane fade" id="run" role="tabpanel" aria-labelledby="pills-contact-tab"> <a href="regex2nfa.html">Reg-Ex to NFA Test</a>  </div>
 </div>
 
-  
-  </div>
 </div>
   
 </body>
