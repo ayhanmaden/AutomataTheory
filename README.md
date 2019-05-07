@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -24,13 +24,13 @@
     <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#Reg-Exp" role="tab" aria-controls="Reg-Exp" aria-selected="true">Regular Expression</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#nfa" role="tab" aria-controls="nfa" aria-selected="false">Non-Deterministic Finite Automata</a>
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#nfa" role="tab" aria-controls="nfa" aria-selected="false">Non</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Construction of an FA from an RE</a>
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Construct</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#run" role="tab" aria-controls="run" aria-selected="false">Reg-Ex to NFA Run</a>
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#run" role="tab" aria-controls="run" aria-selected="false">Reg-Ex</a>
   </li>
 </ul>
 <div class="tab-content" id="pills-tabContent">
@@ -57,5 +57,3 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
-</html>
