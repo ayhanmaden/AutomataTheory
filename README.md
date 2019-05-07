@@ -2,6 +2,7 @@
 
 # Class Works
 
+[CW1 - NFA , DFA , RegEx for (1|0)*00](https://ayhanmaden.github.io/AutomataTheory/CW1/CW1.html) <br>
 [CW2 - NFA , DFA , RegEx for (1|0)*00](https://ayhanmaden.github.io/AutomataTheory/CW2/CW2.html) <br>
 [CW3 - Regular Expressions](https://ayhanmaden.github.io/AutomataTheory/CW3/CW3.html) <br>
 [CW4 - Palindromes](https://ayhanmaden.github.io/AutomataTheory/CW4/CW4.html) <br>
