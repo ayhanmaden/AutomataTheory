@@ -7,10 +7,7 @@
   <meta name="author" content="Ayhan Maed" />
   <meta name="Description" content="Regular,Exepression,regex,js,css,html,automata">
   <meta name="theme-color" content="white">
-
-  <title>regexToNfa</title>
-
-  
+ 
 
 <body style=" background-color:darkcyan">
   
@@ -35,7 +32,16 @@
 </ul>
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="Reg-Exp" role="tabpanel" aria-labelledby="pills-home-tab">
- Automata İçeriği Hazırlanıyor...
+
+<li>[CW1 - DFA = NOT FOR 00 ](https://ayhanmaden.github.io/AutomataTheory/CW1/CW1.html)</li> <br>
+<li>[CW2 - NFA , DFA , RegEx for (1|0)*00](https://ayhanmaden.github.io/AutomataTheory/CW2/CW2.html)</li> <br>
+<li>[CW3 - Regular Expressions](https://ayhanmaden.github.io/AutomataTheory/CW3/CW3.html)</li> <br>
+<li>[CW4 - Palindromes](https://ayhanmaden.github.io/AutomataTheory/CW4/CW4.html)</li> <br>
+<li>[CW5 - Expression Parser](https://ayhanmaden.github.io/AutomataTheory/CW5/Expression.html)</li> <br>
+<li>[CW6 - PDA for Addition](https://ayhanmaden.github.io/AutomataTheory/CW6/PDA.html)</li> <br>
+<li>[CW7 - Dışardan girilen "n" sayısına kadar olan sayıların karelerinin toplamını hesaplayan program](https://ayhanmaden.github.io/AutomataTheory/CW7/microJ3.html)</li> <br>
+
+
   </div>
   <div class="tab-pane fade" id="nfa" role="tabpanel" aria-labelledby="pills-profile-tab">Non-Deterministic Finite Automata İçeriği Hazırlanıyor...</div>
   
@@ -43,7 +49,6 @@
   <div class="tab-pane fade" id="run" role="tabpanel" aria-labelledby="pills-contact-tab"> <a href="regex2nfa.html">Reg-Ex to NFA Test</a>  </div>
 </div>
 
-</div>
   
 </body>
 
