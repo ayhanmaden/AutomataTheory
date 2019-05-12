@@ -8,7 +8,7 @@
   <meta name="Description" content="Regular,Exepression,regex,js,css,html,automata">
   <meta name="theme-color" content="white">
 
-  <title>regexToNfa</title>
+  <title>Regular Expression To NFA</title>
 
   
 
@@ -16,7 +16,7 @@
   
 
 <div class="row card shadow p-3 mb-5 bg-white rounded" style="margin: 20px auto;max-width: 80; width: 70%">
-<h1 style="padding: 20px; color: #046565">Regex to NFA</h1>
+<h1 style="padding: 20px; color: #046565">Regular Expression to NFA</h1>
 
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   
@@ -54,20 +54,176 @@
 <li><b>R*</b> is a Regular Expression corresponding to the language <b>L(R*)</b> where <b>L(R*) = (L(R))*</b></li>
 </ul></li>
 <p>If we apply any of the rules several times from 1 to 5, they are Regular Expressions.</p>
-<p><img src="regex.jpg" alt="Örnek Resim"/></p>
-  </p>
+<h4>Some Re Examples</h4>
+<table style="text-align:center;" class="table table-bordered">
+	<tr>
+		<th style="text-align:center;">Regular Expression</th>
+		<th style="text-align:center;">Regular Set</th>
+	</tr>
+	<tr>
+		<td>(0 + 10*)</td>
+		<td>L = {0, 1, 10, 100, 1000, 10000, ...}</td>
+	</tr>
+	<tr  >
+		<td>(0*10*)</td>
+		<td>L = {1, 01, 10, 010, 0010, ...}</td>
+	</tr>
+	<tr>
+		<td>(0 + ε)(1 + ε)</td>
+		<td>L = {ε, 0, 1, 01}</td>
+	</tr>
+	<tr>
+		<td>(a+b)*</td>
+		<td>Set of strings of a's and b's of ant lenght including the null string. So L= {ε, a, b, aa, ab, bb, ba, aaa..... }</td>
+	</tr>
+	<tr>
+		<td>(a+b)*abb</td>
+		<td>Set of strings of a's and b's ending with the string abb. So L= {abb, aabb, babb, aaabb, ababb, ..... }</td>
+	</tr>
+	<tr>
+		<td>(11)*</td>
+		<td>Set consisting of even number of 1's including empty string, So L= {ε, 11, 1111, 111111, .......}</td>
+	</tr>
+	<tr>
+		<td>(aa)*(bb)*b</td>
+		<td>Set of strings consisting of even number of a's followed by odd number of b's , so L = {b, aab, aabbb, aabbbbb, aaaab, aaaabbb, .......}</td>
+	</tr>
+	
+	</table>
   
   </div>
-  <div class="tab-pane fade" id="nfa" role="tabpanel" aria-labelledby="pills-profile-tab">Non-Deterministic Finite Automata İçeriği Hazırlanıyor...</div>
+  <div class="tab-pane fade" id="nfa" role="tabpanel" aria-labelledby="pills-profile-tab">
   
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"> Construction of an FA from an RE İçeriği Hazırlanıyor... </div>
-  <div class="tab-pane fade" id="run" role="tabpanel" aria-labelledby="pills-contact-tab"><a href="regex2nfa.html"><li>Reg-Ex to NFA Test</li></a>  </div>
+  <p>In NDFA, for a particular input symbol, the machine can move to any combination of the states in the machine. 
+  In other words, the exact state to which the machine moves cannot be determined. Hence, it is called <b>Non-deterministic Automaton.</b> 
+  As it has finite number of states, the machine is called <b>Non-deterministic Finite Machine</b> or <b>Non-deterministic Finite Automaton.</b></p>
+ 
+  <p><b>Formal Definition of an NDFA</b></p>
+  
+  <p>An NDFA can be represented by a 5-tuple (Q, ∑, δ, q0, F) where −</p><br>
+  <ul>
+  <li><b>Q</b> is a finite set of states.</li><br>
+  <li><b>∑</b> is a finite set of symbols called the alphabets.</li><br>
+  <li><b>δ</b> is the transition function where δ: Q × ∑ → 2Q</li><br>
+  <p>(Here the power set of Q (2Q) has been taken because in case of NDFA, from a state, transition can occur to any combination of Q states)</p>
+  <li><b>q0</b> is the initial state from where any input is processed (q0 ∈ Q).</li><br>
+  <li><b>F</b> is a set of final state/states of Q (F ⊆ Q).</li><br>
+  </ul>
+  
+  <p><b>Graphical Representation of an NDFA: (same as DFA)</b></p>
+  <p>An NDFA is represented by digraphs called state diagram.</p>
+  <ul>
+  <li>The vertices represent the states.</li>
+  <li>The arcs labeled with an input alphabet show the transitions.</li>
+  <li>The initial state is denoted by an empty single incoming arc.</li>
+  <li>The final state is indicated by double circles.</li>
+  </ul>
+  <p><b>Example</b></p>
+	<p>Let a non-deterministic finite automaton be &rarr;</p>
+	<ul class="list">
+		<li>Q = {a, b, c}</li>
+		<li>&sum; = {0, 1}</li>
+		<li>q<sub>0</sub> = {a}</li>
+		<li>F = {c}</li>
+	</ul>
+	<p>The transition function &delta; as shown below &minus;</p>
+  <table style="text-align:center;" class="table table-bordered">
+	<tr>
+		<th style="text-align:center;">Present State</th>
+		<th style="text-align:center;">Next State for Input 0</th>
+		<th style="text-align:center;">Next State for Input 1</th>
+	</tr>
+	<tr>
+		<td>a</td>
+		<td>a, b</td>
+		<td>b</td>
+	</tr>
+	<tr  >
+		<td>b</td>
+		<td>c</td>
+		<td>a, c</td>
+	</tr>
+	<tr>
+		<td>c</td>
+		<td>b, c</td>
+		<td>c</td>
+	</tr>
+	</table>
+  </div>
+  
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+  
+   <p>We can use Thompson's Construction to find out a Finite Automaton from a Regular Expression. We will reduce the regular expression into smallest regular expressions and converting these to NFA and finally to DFA.</p>
+<p>Some basic RA expressions are the following &minus;</p>
+<p><b><i>Case 1</i></b> &minus; For a regular expression ‘a’, we can construct the following FA &minus;</p>
+<img src="img/case1.jpg" alt="Finite Automata for RE" />
+<p><b><i>Case 2</i></b> &minus; For a regular expression ‘ab’, we can construct the following FA &minus;</p>
+<img src="img/case2.jpg" alt="Finite Automata for RE1" />
+<p><b><i>Case 3</i></b> &minus; For a regular expression (a+b), we can construct the following FA &minus;</p>
+<img src="img/case3.jpg" alt="Finite Automata for RE2" />
+<p><b><i>Case 4</i></b> &minus; For a regular expression (a+b)*, we can construct the following FA &minus;</p>
+<img src="img/case4.jpg" alt="Finite Automata for RE3" />
+<h3>Method</h3>
+<p><b>Step 1</b> <span style="padding-left:3%;">Construct an NFA with Null moves from the given regular expression.</span></p>
+<p><b>Step 2</b> <span style="padding-left:3%;">Remove Null transition from the NFA and convert it into its equivalent DFA.</span></p>
+<p><b>Problem</b></p>
+<p>Convert the following RA into its equivalent DFA &minus; 1 (0 + 1)* 0</p>
+<p><b><i>Solution</i></b></p>
+<p>We will concatenate three expressions "1", "(0 + 1)*" and "0"</p>
+<img src="img/case5.jpg" alt="NDFA with Null Transition for RA" />
+<p>Now we will remove the <b>&epsilon;</b> transitions. After we remove the <b>&epsilon;</b> transitions from the NDFA, we get the following &minus;</p>
+<img src="img/case6.jpg" alt="NDFA with Null Transition for RA1" />
+<p>It is an NDFA corresponding to the RE &minus; 1 (0 + 1)* 0. If you want to convert it into a DFA, simply apply the method of converting NDFA to DFA discussed in Chapter 1.</p>
+<h2>Finite Automata with Null Moves (NFA-&epsilon;)</h2>
+<p>A Finite Automaton with null moves (FA-&epsilon;) does transit not only after giving input from the alphabet set but also without any input symbol. This transition without input is called a <b>null move</b>.</p>
+<p>An NFA-&epsilon; is represented formally by a 5-tuple (Q, &sum;, &delta;, q<sub>0</sub>, F), consisting of</p>
+<ul class="list">
+<li><p><b>Q</b> &minus; a finite set of states</p></li>
+<li><p><b>&sum;</b> &minus; a finite set of input symbols</p></li>
+<li><p><b>&delta;</b> &minus; a transition function δ : Q &times; (&sum; &cup; {&epsilon;}) &rarr; 2<sup>Q</sup></p></li>
+<li><p><b>q<sub>0</sub></b> &minus; an initial state q<sub>0</sub> &isin; Q</p></li>
+<li><p><b>F</b> &minus; a set of final state/states of Q (F&sube;Q).</p></li>
+</ul>
+<img src="img/case7.jpg" alt="Finite Automata with Null Moves" />
+<p>The above <b>(FA-&epsilon;)</b> accepts a string set &minus; {0, 1, 01}</p>
+<h2>Removal of Null Moves from Finite Automata</h2>
+<p>If in an NDFA, there is  ϵ-move between vertex X to vertex Y, we can remove it using the following steps &minus;</p>
+<ul class="list">
+<li>Find all the outgoing edges from Y.</li>
+<li>Copy all these edges starting from X without changing the edge labels.</li>
+<li>If X is an initial state, make Y also an initial state.</li>
+<li>If Y is a final state, make X also a final state.</li>
+</ul>
+<p><b>Problem</b></p>
+<p>Convert the following NFA-&epsilon; to NFA without Null move.</p>
+<img src="img/case8.jpg" alt="Finite Automata with Null Moves1" />
+<p><b><i>Solution</i></b></p>
+<p><b>Step 1</b> &minus;</p>
+<p style="padding-left:8%;">Here the &epsilon; transition is between <b>q<sub>1</sub></b> and <b>q<sub>2</sub></b>, so let <b>q<sub>1</sub></b> is <b>X</b> and <b>q<sub>f</sub></b> is <b>Y</b>.</p>
+<p style="padding-left:8%;">Here the outgoing edges from q<sub>f</sub> is to q<sub>f</sub> for inputs 0 and 1.</p>
+<p><b>Step 2</b> &minus;</p>
+<p style="padding-left:8%;">Now we will Copy all these edges from q<sub>1</sub> without changing the edges from q<sub>f</sub> and get the following FA &minus;</p>
+<img src="img/case9.jpg" alt="NDFA After Step 2" />
+<p><b>Step 3</b> &minus;</p>
+<p style="padding-left:8%;">Here q<sub>1</sub> is an initial state, so we make q<sub>f</sub> also an initial state.</p>
+<p style="padding-left:8%;">So the FA becomes &minus;</p>
+<img src="img/case10.jpg" alt="NDFA After Step 3" />
+<p><b>Step 4</b> &minus;</p>
+<p style="padding-left:8%;">Here q<sub>f</sub> is a final state, so we make q<sub>1</sub> also a final state.</p>
+<p style="padding-left:8%;">So the FA becomes &minus;</p>
+<img src="img/case11.jpg" alt="Final NDFA Without Null Moves" /><br>
+<hr /> 
+   
+   </div>
+  <div class="tab-pane fade" id="run" role="tabpanel" aria-labelledby="pills-contact-tab"><ul><li><b> <a href="regex2nfa.html">Reg-Ex to NFA Test</a> </b></ul></li></li> </div>
 </div>
 
   
   </div>
+  
 </div>
   
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"
