@@ -156,13 +156,13 @@
    <p>We can use Thompson's Construction to find out a Finite Automaton from a Regular Expression. We will reduce the regular expression into smallest regular expressions and converting these to NFA and finally to DFA.</p>
 <p>Some basic RA expressions are the following &minus;</p>
 <p><b><i>Case 1</i></b> &minus; For a regular expression ‘a’, we can construct the following FA &minus;</p>
-<img src="img/case1.jpg" alt="Finite Automata for RE" />
+<img src="img/case1.JPG" alt="Finite Automata for RE" />
 <p><b><i>Case 2</i></b> &minus; For a regular expression ‘ab’, we can construct the following FA &minus;</p>
-<img src="img/case2.jpg" alt="Finite Automata for RE1" />
+<img src="img/case2.JPG" alt="Finite Automata for RE1" />
 <p><b><i>Case 3</i></b> &minus; For a regular expression (a+b), we can construct the following FA &minus;</p>
-<img src="img/case3.jpg" alt="Finite Automata for RE2" />
+<img src="img/case3.JPG" alt="Finite Automata for RE2" />
 <p><b><i>Case 4</i></b> &minus; For a regular expression (a+b)*, we can construct the following FA &minus;</p>
-<img src="img/case4.jpg" alt="Finite Automata for RE3" />
+<img src="img/case4.JPG" alt="Finite Automata for RE3" />
 <h3>Method</h3>
 <p><b>Step 1</b> <span style="padding-left:3%;">Construct an NFA with Null moves from the given regular expression.</span></p>
 <p><b>Step 2</b> <span style="padding-left:3%;">Remove Null transition from the NFA and convert it into its equivalent DFA.</span></p>
@@ -170,9 +170,9 @@
 <p>Convert the following RA into its equivalent DFA &minus; 1 (0 + 1)* 0</p>
 <p><b><i>Solution</i></b></p>
 <p>We will concatenate three expressions "1", "(0 + 1)*" and "0"</p>
-<img src="img/case5.jpg" alt="NDFA with Null Transition for RA" />
+<img src="img/case5.JPG" alt="NDFA with Null Transition for RA" />
 <p>Now we will remove the <b>&epsilon;</b> transitions. After we remove the <b>&epsilon;</b> transitions from the NDFA, we get the following &minus;</p>
-<img src="img/case6.jpg" alt="NDFA with Null Transition for RA1" />
+<img src="img/case6.JPG" alt="NDFA with Null Transition for RA1" />
 <p>It is an NDFA corresponding to the RE &minus; 1 (0 + 1)* 0. If you want to convert it into a DFA, simply apply the method of converting NDFA to DFA discussed in Chapter 1.</p>
 <h2>Finite Automata with Null Moves (NFA-&epsilon;)</h2>
 <p>A Finite Automaton with null moves (FA-&epsilon;) does transit not only after giving input from the alphabet set but also without any input symbol. This transition without input is called a <b>null move</b>.</p>
@@ -184,7 +184,7 @@
 <li><p><b>q<sub>0</sub></b> &minus; an initial state q<sub>0</sub> &isin; Q</p></li>
 <li><p><b>F</b> &minus; a set of final state/states of Q (F&sube;Q).</p></li>
 </ul>
-<img src="img/case7.jpg" alt="Finite Automata with Null Moves" />
+<img src="img/case7.JPG" alt="Finite Automata with Null Moves" />
 <p>The above <b>(FA-&epsilon;)</b> accepts a string set &minus; {0, 1, 01}</p>
 <h2>Removal of Null Moves from Finite Automata</h2>
 <p>If in an NDFA, there is  ϵ-move between vertex X to vertex Y, we can remove it using the following steps &minus;</p>
@@ -196,22 +196,22 @@
 </ul>
 <p><b>Problem</b></p>
 <p>Convert the following NFA-&epsilon; to NFA without Null move.</p>
-<img src="img/case8.jpg" alt="Finite Automata with Null Moves1" />
+<img src="img/case8.JPG" alt="Finite Automata with Null Moves1" />
 <p><b><i>Solution</i></b></p>
 <p><b>Step 1</b> &minus;</p>
 <p style="padding-left:8%;">Here the &epsilon; transition is between <b>q<sub>1</sub></b> and <b>q<sub>2</sub></b>, so let <b>q<sub>1</sub></b> is <b>X</b> and <b>q<sub>f</sub></b> is <b>Y</b>.</p>
 <p style="padding-left:8%;">Here the outgoing edges from q<sub>f</sub> is to q<sub>f</sub> for inputs 0 and 1.</p>
 <p><b>Step 2</b> &minus;</p>
 <p style="padding-left:8%;">Now we will Copy all these edges from q<sub>1</sub> without changing the edges from q<sub>f</sub> and get the following FA &minus;</p>
-<img src="img/case9.jpg" alt="NDFA After Step 2" />
+<img src="img/case9.JPG" alt="NDFA After Step 2" />
 <p><b>Step 3</b> &minus;</p>
 <p style="padding-left:8%;">Here q<sub>1</sub> is an initial state, so we make q<sub>f</sub> also an initial state.</p>
 <p style="padding-left:8%;">So the FA becomes &minus;</p>
-<img src="img/case10.jpg" alt="NDFA After Step 3" />
+<img src="img/case10.JPG" alt="NDFA After Step 3" />
 <p><b>Step 4</b> &minus;</p>
 <p style="padding-left:8%;">Here q<sub>f</sub> is a final state, so we make q<sub>1</sub> also a final state.</p>
 <p style="padding-left:8%;">So the FA becomes &minus;</p>
-<img src="img/case11.jpg" alt="Final NDFA Without Null Moves" /><br>
+<img src="img/case11.JPG" alt="Final NDFA Without Null Moves" /><br>
 <hr /> 
    
    </div>
